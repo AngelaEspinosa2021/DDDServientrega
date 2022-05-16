@@ -1,5 +1,6 @@
 package co.com.servientrega.logistica.guia;
 
+import co.com.servientrega.logistica.guia.events.GuiaCreada;
 import co.com.servientrega.logistica.guia.values.*;
 import co.com.sofka.domain.generic.AggregateEvent;
 
@@ -13,6 +14,7 @@ public class Guia extends AggregateEvent<GuiaId> {
 
     public Guia(GuiaId entityId, RemitenteId remitenteId, DestinarioId destinarioId,Paquete paquete,Precio precio,Estado estado,Fecha fecha) {
         super(entityId);
+        appendChange(new GuiaCreada(remitenteId,destinarioId,paquete,precio,estado,fecha)).apply();
     }
 
 
