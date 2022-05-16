@@ -1,5 +1,6 @@
 package co.com.servientrega.logistica.distribucion;
 
+import co.com.servientrega.logistica.distribucion.events.DistribucionCreada;
 import co.com.servientrega.logistica.distribucion.values.DistribucionId;
 import co.com.servientrega.logistica.distribucion.values.EmpleadoId;
 import co.com.servientrega.logistica.distribucion.values.VehiculoId;
@@ -14,8 +15,10 @@ public class Distribucion extends AggregateEvent<DistribucionId> {
     protected VehiculoId vehiculoId;
     protected Map<GuiaId, Guia> guias;
 
-    public Distribucion(DistribucionId DistribucionId, EmpleadoId empleadoId, VehiculoId vehiculoId) {
-        super(DistribucionId);
+    public Distribucion(DistribucionId entityId, EmpleadoId empleadoId, VehiculoId vehiculoId) {
+        super(entityId);
+        appendChange(new DistribucionCreada(empleadoId, vehiculoId)).apply();
+
     }
 
 
