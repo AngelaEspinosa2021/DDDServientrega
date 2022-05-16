@@ -1,2 +1,4 @@
-package co.com.servientrega.logistica.guia;public class Guia {
+package co.com.servientrega.logistica.guia;
+
+public class Guia {
 }
