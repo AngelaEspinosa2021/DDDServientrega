@@ -1,4 +1,4 @@
-package co.com.servientrega.logistica.distribucion;
+package co.com.servientrega.logistica.distribucion.values;
 
 import co.com.sofka.domain.generic.Identity;
 
