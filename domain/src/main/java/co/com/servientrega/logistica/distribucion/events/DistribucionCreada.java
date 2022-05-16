@@ -7,19 +7,13 @@ import co.com.sofka.domain.generic.DomainEvent;
 
 public final class DistribucionCreada extends DomainEvent {
 
-    private DistribucionId distribucionId;
     private EmpleadoId empleadoId;
     private VehiculoId vehiculoId;
 
-    public DistribucionCreada(DistribucionId DistribucionId, EmpleadoId empleadoId, VehiculoId vehiculoId) {
+    public DistribucionCreada(EmpleadoId empleadoId, VehiculoId vehiculoId) {
         super("co.com.servientrega.logistica.distribucion.events.DistribucionCreado");
-        distribucionId = DistribucionId;
         this.empleadoId = empleadoId;
         this.vehiculoId = vehiculoId;
-    }
-
-    public DistribucionId getDistribucionId() {
-        return distribucionId;
     }
 
     public EmpleadoId getEmpleadoId() {
