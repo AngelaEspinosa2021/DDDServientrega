@@ -14,4 +14,6 @@ public class Guia extends AggregateEvent<GuiaId> {
     public Guia(GuiaId entityId, RemitenteId remitenteId, DestinarioId destinarioId,Paquete paquete,Precio precio,Estado estado,Fecha fecha) {
         super(entityId);
     }
+
+
 }
