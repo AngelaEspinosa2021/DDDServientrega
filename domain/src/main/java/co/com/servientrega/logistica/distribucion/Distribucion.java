@@ -1,4 +1,5 @@
 package co.com.servientrega.logistica.distribucion;
 
-public class Distribucion {
+public class Distribucion extends AggregateEvent<DistribucionId>{
+
 }
